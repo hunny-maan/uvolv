@@ -1,0 +1,4 @@
+name = Social Login
+description = Common Functionality for Uvolv
+package = CUSTOM
+core = 7.x

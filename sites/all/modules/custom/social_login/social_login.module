@@ -1,0 +1,59 @@
+<?php
+// function for block info
+function social_login_block_info() {
+  $block = array( );
+  $blocks['goath-login'] = array(
+    'info' => t('Google Oath login'),
+  );
+  return $blocks;
+}
+
+function social_login_block_view($delta='') {
+  $block = array( );
+  switch ($delta) {
+    case 'goath-login':
+      $block['subject'] = t('Google Oath');
+      $formData = drupal_get_form('goath_login_form');
+      $block['content'] = drupal_render($formData);
+    break;
+  }
+  return $block;
+}
+// function for render google oath function
+function goath_login_form($form, $form_state){
+  $form['submit_google'] = array(
+    '#type' => 'submit',
+    '#value' => t(''),
+    '#submit' => array('gauth_login_user_login_submit'),
+    '#limit_validation_errors' => array(),
+    '#weight' => 1000,
+  );
+  drupal_add_css(drupal_get_path('module', 'gauth_login') . '/gauth_login.css');
+  return $form;
+}
+// form alter function implementation
+function social_login_form_alter(&$form, &$form_state, $form_id) {
+  if($form_id == 'comment_node_blog_form'){
+    drupal_add_js('function textAreaAdjust(o) {
+        o.style.height = "1px";
+        o.style.height = (25+o.scrollHeight)+"px";
+      }',  'inline');    
+    
+    unset($form['subject']);
+    unset($form['author']);
+    // $form['comment_body']['und'][0]['#attributes']['placeholder'] = t('Add a comment');
+    $form['comment_body']['und'][0]['value']['#attributes'] += array('onkeyup' => 'textAreaAdjust(this);', 'placeholder' => 'Add a comment');
+    //dpm($form);
+    /*echo "<pre>";
+    print_r($form);
+    die;*/
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */ 
+function social_login_menu_alter(&$items) {
+  // Example - disable the page at node/add
+  $items['blog/content']['theme callback'] = 'seven';
+}
