@@ -244,21 +244,7 @@
  *   );
  * @endcode
  */
-$databases = array (
-  'default' => 
-  array (
-    'default' => 
-    array (
-      'database' => 'uvolv_datbase',
-      'username' => 'uvolv_user',
-      'password' => 'uvolvFrank',
-      'host' => 'uvolvdatbase2017.cqx8hkhz2f8t.us-west-2.rds.amazonaws.com',
-      'port' => '3306',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-);
+$databases = array ();
 
 /**
  * Access control for update.php script.
