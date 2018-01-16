@@ -16,4 +16,4 @@ See the respective README.txt files in sites/all/themes and sites/all/modules
 for additional information about obtaining and organizing extensions.
 
 See INSTALL.txt in the Drupal root for information about single-site
-installation or multisite configuration.
+installation or multisite configuration test.
