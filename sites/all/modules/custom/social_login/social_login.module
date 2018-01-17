@@ -56,4 +56,5 @@ function social_login_form_alter(&$form, &$form_state, $form_id) {
 function social_login_menu_alter(&$items) {
   // Example - disable the page at node/add
   $items['blog/content']['theme callback'] = 'seven';
+  //dpm("Hello");
 }
