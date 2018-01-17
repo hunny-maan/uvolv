@@ -11,4 +11,4 @@ hooks:
  AfterInstall:
    - location: scripts/change_permission.sh
      timeout: 300
-     runas: ubuntu
+     runas: root
