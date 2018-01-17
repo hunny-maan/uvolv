@@ -1,5 +1,4 @@
 chmod -R 775 /var/www/html/sites/*
 
-chmod -R 775 /var/www/html/sites/all/libraries/
-chmod -R 775 /var/www/html/sites/all/modules/
-chmod -R 775 /var/www/html/sites/all/themes/
+chmod 777 all/ default/
+chmod 777 libraries/ modules/ themes/
