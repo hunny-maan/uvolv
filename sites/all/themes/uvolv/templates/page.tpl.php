@@ -175,20 +175,11 @@ global $base_url;
 if((!user_is_logged_in()) && (!empty(arg(1))) && (is_numeric(arg(1))) && (!empty($node = node_load(arg(1)))) && ($node->type == 'blog')){?>
 	<script type="text/javascript">
     jQuery(".fancybox").trigger('click');
-	  jQuery(document).ready(function(){
-    	/*jQuery.colorbox({
-    		inline:true,
-    		href:"#social-popup",
-    		width:500,
-    		height:300,
-    		open:true,
-        opacity:.7,
-        closeButton:false,
-        escKey: false,
-        overlayClose: false
-    	})*/
+	  jQuery(document).ready(function(){    	
       jQuery(".fancybox").fancybox({
-        closeBtn:false,
+        prevEffect    : 'none',
+        nextEffect    : 'none',
+        closeBtn    : false,
         closeClick  : false, // prevents closing when clicking INSIDE fancybox 
         openEffect  : 'none',
         closeEffect : 'none',
