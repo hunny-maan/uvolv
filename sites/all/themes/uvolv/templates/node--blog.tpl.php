@@ -234,7 +234,7 @@ $carouselPath = libraries_get_path('owl-carousel');
     jQuery(".fancybox").trigger('click');
   }
   jQuery(".fancybox").fancybox({
-    //closeBtn:false,
+    closeBtn:false,
     closeClick  : false, // prevents closing when clicking INSIDE fancybox 
     openEffect  : 'none',
     closeEffect : 'none',
@@ -242,6 +242,10 @@ $carouselPath = libraries_get_path('owl-carousel');
     height    : '100%',
     helpers   : { 
       overlay : {closeClick: false} // prevents closing when clicking OUTSIDE fancybox 
+    },
+    keys : {
+      // prevents closing when press ESC button
+      close  : null
     }
   });
 </script>
