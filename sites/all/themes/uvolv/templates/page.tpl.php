@@ -165,7 +165,9 @@ global $base_url;
           </div>
 		  	</div>
 		  	<div class="margin-bottom-10"><h4>-- OR --</h4></div>
-		  	<div><strong><a href="<?php echo $base_url.$base_path.'user/register'?>">Signup with your email</strong></a></div>
+		  	<div>
+          <strong><a href="<?php echo $base_url.$base_path.'user/login'?>">Login</a> / <a href="<?php echo $base_url.$base_path.'user/register'?>">Signup </a>with your email</strong>
+        </div>
 	  	</div>
 	  </div>
   <?php } ?>
