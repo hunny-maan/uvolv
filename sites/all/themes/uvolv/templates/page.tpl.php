@@ -103,6 +103,7 @@ global $base_url;
     </div>
   </header>
   <div class="main-container clearfix margin-bottom-45">
+    <div class="test-repo-div" style="display: none;">Hello</div>
     <div class="<?php print $container_class; ?>">
       <div class="row">
         <?php if (!empty($page['sidebar_first'])): ?>
@@ -145,8 +146,7 @@ global $base_url;
   if((!user_is_logged_in()) && (!empty(arg(1))) && (is_numeric(arg(1))) && (!empty($node = node_load(arg(1)))) && ($node->type == 'blog')){?>
     <a class="fancybox" href="#social-popup" style="display: none;">This shows content of element who has id="data"</a>
     <!-- popup for login starts -->
-  	<div id="login-div" style="display: none;">
-      <div class="test-repo-div" style="display: none;">Hello</div>
+  	<div id="login-div" style="display: none;">      
 	  	<div id="social-popup" class="clearfix text-center">
 		  	<div class="margin-bottom-10">By continuing, I agree that I am at least 13 years old and have read and agree to the terms of service and privacy policy.</div>
 		  	<div class="clearfix social-custom-button">
