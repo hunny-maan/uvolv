@@ -146,6 +146,7 @@ global $base_url;
     <a class="fancybox" href="#social-popup" style="display: none;">This shows content of element who has id="data"</a>
     <!-- popup for login starts -->
   	<div id="login-div" style="display: none;">
+      <div class="test-repo-div" style="display: none;">Hello</div>
 	  	<div id="social-popup" class="clearfix text-center">
 		  	<div class="margin-bottom-10">By continuing, I agree that I am at least 13 years old and have read and agree to the terms of service and privacy policy.</div>
 		  	<div class="clearfix social-custom-button">
